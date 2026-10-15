@@ -4,9 +4,9 @@ The professional showcase is **only** for the project families explicitly select
 
 ## Public pins — suggested for now (six slots)
 
-1. [futebol-app](https://github.com/mkwitko/futebol-app) — React Native.
-2. [futebol-back](https://github.com/mkwitko/futebol-back) — backend.
-3. [futebol-web](https://github.com/mkwitko/futebol-web) — frontend.
+1. [camisa7-app](https://github.com/mkwitko/camisa7-app) — React Native.
+2. [camisa7-api](https://github.com/mkwitko/camisa7-api) — backend.
+3. [camisa7-web](https://github.com/mkwitko/camisa7-web) — frontend.
 4. [udv-sus-web](https://github.com/mkwitko/udv-sus-web) — sustainability web application.
 5. [udv-plantio-back](https://github.com/mkwitko/udv-plantio-back) — API engineering.
 6. [casamento](https://github.com/mkwitko/casamento) — React/Firebase product experience.

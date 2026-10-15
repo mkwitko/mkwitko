@@ -29,7 +29,7 @@ This folder contains a lightweight, responsive engineering portfolio site in Eng
 
 ## Content sourcing
 
-Statements reference existing CVs and the explicitly selected, publicly inspectable repositories: `futebol-app`, `futebol-back`, `futebol-web`, `udv-sus-web`, `udv-plantio-back`, and `casamento`. Other selected projects remain private pending safe-publication review. A 3s→150ms career achievement appears in the resume, **not** as a benchmark independently derived from these GitHub repositories.
+Statements reference existing CVs and the explicitly selected, publicly inspectable repositories: `camisa7-app`, `camisa7-api`, `camisa7-web`, `udv-sus-web`, `udv-plantio-back`, and `casamento`. Other selected projects remain private pending safe-publication review. A 3s→150ms career achievement appears in the resume, **not** as a benchmark independently derived from these GitHub repositories.
 
 ## Pages URL caution
 
