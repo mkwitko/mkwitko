@@ -1,44 +1,75 @@
+<div align="center">
+
+<img src="./assets/engineering-banner.svg" alt="Mauricio Kwitko — software engineering, architecture and applied AI" width="100%" />
+
 # Mauricio Kwitko
 
-**Senior Software Engineer | Frontend, Full Stack, Backend, Mobile & Applied AI**
+**Senior Software Engineer · Full Stack & Technical Leadership**
 
-I build and improve software products end to end, from React interfaces and mobile experiences to Node.js services, system architecture and AI-assisted workflows. I have 7+ years of software engineering experience, including technical leadership, platform refactoring and mentoring.
+React / Next.js · Node.js / Fastify · React Native · System Design · Applied AI
 
-**Based in Florianópolis, Brazil · Open to remote international opportunities**
+**Florianópolis, Brazil · Available for remote international opportunities**
 
-## What I work with
+[Email me](mailto:mauriciokwt@gmail.com) · [Architecture case studies](./docs/ARCHITECTURE_PORTFOLIO.md) · [Portfolio index](#selected-engineering-work)
 
-- **Frontend:** React, Next.js, TypeScript, Tailwind CSS, component architecture, product UX.
-- **Backend:** Node.js, Fastify, NestJS, PostgreSQL, Prisma, Zod, REST APIs, real-time systems.
-- **Mobile:** React Native, Expo Router, TypeScript, navigation, integrations and animations.
-- **Applied AI:** LLM integrations, tool-based workflows, background jobs, AI evaluation and content pipelines.
-- **Delivery:** Docker, CI/CD, Cloudflare and maintainable engineering practices.
-
-## Selected public work
-
-| Project | Engineering focus | Code |
-| --- | --- | --- |
-| Community Storefront — Web | React / TanStack Start, Tailwind CSS, typed API client, Cloudflare Workers configuration | [Web repository](https://github.com/mkwitko/udv-shop) |
-| Community Storefront — API | Fastify, Prisma, Zod, OpenAPI, authentication and API tests | [API repository](https://github.com/mkwitko/udv-shop-api) |
-| React Native Finance App | Expo Router, TypeScript, mobile integrations and testing tooling | [Mobile repository](https://github.com/mkwitko/finance-app) |
-| LunaJoy — Well-being UI | React, Vite, TanStack Query, data visualization and real-time events | [Frontend repository](https://github.com/mkwitko/lunajoy-front) |
-
-## Experience & engineering impact
-
-- Promoted from Software Developer to Tech Lead within nine months at Ezoom.
-- Contributed to an API architecture redesign that reduced average response latency from **3 seconds to 150 milliseconds (20× improvement)**.
-- Worked on web, mobile and real-time products, including monetization infrastructure, platform architecture and engineering mentorship.
-- Led a refactor of a core platform and improvements to engineering standards and delivery workflows at B2B Reservas.
-
-## Beyond public source code
-
-Some of my recent work is in private repositories, including an AI-assisted content platform with a Fastify/MCP interface, background workers, PostgreSQL, media storage and evaluation pipelines. I can discuss architecture and engineering trade-offs without disclosing private code, credentials or customer data.
-
-## Contact
-
-- **Email:** [mauriciokwt@gmail.com](mailto:mauriciokwt@gmail.com)
-- **Location:** Florianópolis, Brazil (remote-friendly)
+</div>
 
 ---
 
-*Project descriptions reflect repository structure and declared technologies. They do not imply a production launch, customer count or business result that has not been verified.*
+### About me
+
+I am a software engineer with **7+ years of experience** building and evolving web, mobile, and real-time products. My background spans hands-on implementation, architectural decisions, platform refactoring, and mentoring teams.
+
+At Ezoom, I progressed from developer to Tech Lead in nine months and worked on an API redesign that reduced average response time from **3s to 150ms** (20× faster). At B2B Reservas, I have led engineering standards and a core-platform refactor.
+
+I care about **maintainable systems, thoughtful product UX, measurable performance, clear contracts, and pragmatic delivery**.
+
+### Selected engineering work
+
+| Area | Project | What the source demonstrates |
+| :-- | :-- | :-- |
+| **Full Stack / Frontend** | [Community Storefront — Web](https://github.com/mkwitko/udv-shop) | React 19, TanStack Start, typed OpenAPI clients, SSR data flow, Cloudflare Workers configuration |
+| **Backend / Architecture** | [Community Storefront — API](https://github.com/mkwitko/udv-shop-api) | Fastify, Prisma/PostgreSQL, use-case slices, explicit permissions, gateway interfaces, integration tests |
+| **Mobile** | [Finance App](https://github.com/mkwitko/finance-app) | React Native, Expo Router, API generation, household and transaction flows, localization |
+| **Frontend / Real-Time** | [LunaJoy Frontend](https://github.com/mkwitko/lunajoy-front) | React, TanStack Query, Recharts, Ably events, typed API integration |
+
+**[Explore the architecture behind these projects →](./docs/ARCHITECTURE_PORTFOLIO.md)**
+
+### Engineering specializations
+
+| Frontend & experience | Backend & architecture | Mobile & delivery | Applied AI |
+| :-- | :-- | :-- | :-- |
+| React, Next.js, TypeScript | Node.js, Fastify, NestJS | React Native, Expo | LLM integrations |
+| Design systems, UI/UX | PostgreSQL, Prisma, Zod | Mobile state and navigation | Tool-based agents |
+| SSR, performance, testing | OpenAPI, auth, API design | CI/CD, Docker, Cloudflare | Evaluation and media pipelines |
+
+### An architecture I like working with
+
+The public storefront and API illustrate a design approach that keeps UI, generated API contracts, business use cases, and infrastructure responsibilities separate.
+
+\`\`\`mermaid
+flowchart LR
+  U["Store visitors / managers"] --> W["React / TanStack Start"]
+  W --> Q["TanStack Query"]
+  Q --> C["Generated OpenAPI client"]
+  C --> A["Fastify + Zod routes"]
+  A --> S["Application use cases"]
+  S --> R["Repository interfaces"]
+  S --> G["Gateway interfaces"]
+  R --> P[("PostgreSQL")]
+  G --> E["External providers"]
+\`\`\`
+
+**[Implementation notes, trade-offs and code references →](./docs/ARCHITECTURE_PORTFOLIO.md)**
+
+### Engineering beyond public code
+
+I also work on private AI-assisted content tooling with API/tool interfaces, background workers and evaluation pipelines. I can discuss approaches and trade-offs without publishing private implementation details or production data. Public projects above are the primary source-verifiable examples.
+
+### Contact
+
+**Open to:** Senior Frontend, Senior Full Stack, Senior Backend, React Native and Applied AI engineering opportunities.
+
+[mauriciokwt@gmail.com](mailto:mauriciokwt@gmail.com) · Florianópolis, Brazil (UTC−3)
+
+<sub>Statements about experience are drawn from my professional CV; technical project descriptions are grounded in the linked source. Production status, usage and quality metrics are not asserted without evidence.</sub>
