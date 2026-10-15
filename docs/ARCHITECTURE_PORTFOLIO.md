@@ -1,82 +1,79 @@
-# Architecture Portfolio
+# Architecture portfolio — selected systems
 
-Evidence-based engineering case studies from public repositories. Each link below goes to a file or document that can be inspected. Diagrams are **conceptual summaries of repository structures**, not deployment diagrams of a verified running production system.
+Architecture notes for publicly inspectable projects in this curated professional portfolio. **The diagrams summarize code structure; they are not assertions about production topology, uptime or real performance.**
 
-## 1. Storefront platform: SSR frontend + contract-driven backend
+## 1. Camisa7: mobile + web + backend boundaries
 
-**Repositories:** [Web](https://github.com/mkwitko/udv-shop) · [API](https://github.com/mkwitko/udv-shop-api)
-
-### Responsibilities and boundaries
+**Public source:** [React Native app](https://github.com/mkwitko/futebol-app) · [Backend API](https://github.com/mkwitko/futebol-back) · [React web app](https://github.com/mkwitko/futebol-web)
 
 ```mermaid
 flowchart TD
-  User["Browser / store manager"] --> F["TanStack Start file routes"]
-  F --> L["SSR loader"]
-  L --> T["TanStack Query cache"]
-  T --> H["Kubb-generated API hooks"]
-  H --> E["Fastify + Zod route contracts"]
-  E --> P["Authorization hooks"]
-  P --> C["HTTP controller"]
-  C --> U["Use-case service"]
-  U --> R["Repository interface"]
-  U --> G["Gateway interface"]
-  R --> DB[("PostgreSQL via Prisma")]
-  G --> Ext["Payments / integrations"]
+  App["React Native / Expo Router"] --> Typed["Generated HTTP / OpenAPI interfaces"]
+  Web["React / TanStack Query"] --> Typed
+  Typed --> HTTP["Fastify HTTP API"]
+  HTTP --> Logic["Server modules and services"]
+  Logic --> Database["Prisma / PostgreSQL"]
+  Logic --> Gateway["External gateway integrations"]
+  Logic --> Jobs["Background jobs"]
 ```
 
-**Why this architecture is interesting**
+### Source evidence and design implications
 
-- **SSR & hydration:** route loaders use a shared TanStack Query cache for initial data; the design is explained in [web architecture notes](https://github.com/mkwitko/udv-shop/blob/main/docs/ARCHITECTURE.md).
-- **Single API contract:** Fastify routes declare Zod request/response shapes and OpenAPI operations; the frontend generates typed query hooks instead of manually duplicating HTTP types. See [OpenAPI export](https://github.com/mkwitko/udv-shop-api/blob/main/docs/openapi.json) and the [web generation configuration](https://github.com/mkwitko/udv-shop/blob/main/kubb.config.ts).
-- **Boundaries:** controllers handle HTTP mapping, services orchestrate business logic, and repositories/gateways isolate I/O. See [backend architecture](https://github.com/mkwitko/udv-shop-api/blob/main/docs/ARCHITECTURE.md) and the [login use case](https://github.com/mkwitko/udv-shop-api/tree/main/src/http/api/auth/login).
-- **Authorization:** routes must be marked public or declare permissions per the backend design. This is a design/code observation, not a security certification.
-- **Verification hooks:** web E2E scenarios live in [e2e](https://github.com/mkwitko/udv-shop/tree/main/e2e), while backend scenarios live in [test/e2e](https://github.com/mkwitko/udv-shop-api/tree/main/test/e2e). Test existence does not mean the latest runs pass.
+| Responsibility | Evidence | Engineering trade-off |
+| --- | --- | --- |
+| Mobile navigation and native integrations | [Mobile app routes](https://github.com/mkwitko/futebol-app/tree/master/src/app) | Platform-specific behavior and runtime permissions |
+| Frontend state and generated bindings | [Web client](https://github.com/mkwitko/futebol-web/tree/master/src/api) | Contract generation must remain synchronized |
+| Typed API and explicit server boundary | [Backend HTTP modules](https://github.com/mkwitko/futebol-back/tree/master/src/http) | Consistent validation and authorization across routes |
+| Provider isolation | [Gateways](https://github.com/mkwitko/futebol-back/tree/master/src/gateways) | Abstraction reduces coupling but increases maintenance cost |
+| Background processing | [Jobs](https://github.com/mkwitko/futebol-back/tree/master/src/jobs) | Requires reliable retry, idempotency and observability |
 
-**Trade-offs worth discussing:** cached SSR data versus browser-only auth restoration; type-generation workflow maintenance; server-side validation and explicit authorization requirements; gateway design for external services.
+**How to inspect:** follow a read/write interaction from one of the mobile/web routes through a generated HTTP client into the backend HTTP layer and service. Review tests and logs before claiming reliability.
 
-## 2. React Native: typed API and household-scoped state
+## 2. Sustainability management: web UI and domain workflows
 
-**Repository:** [finance-app](https://github.com/mkwitko/finance-app)
+**Public source:** [udv-sus-web](https://github.com/mkwitko/udv-sus-web)
 
-```mermaid
-flowchart TD
-  R["Expo Router"] --> Screens["Today / Transactions / Insights / Settings"]
-  Screens --> Query["Generated API hooks + TanStack Query"]
-  Screens --> Local["Zustand household state"]
-  Screens --> UI["Shared React Native UI"]
-  Query --> HTTP["Configured backend API"]
-  Screens --> Native["Native integrations"]
-```
+- [Dashboard](https://github.com/mkwitko/udv-sus-web/blob/main/src/pages/dashboard.tsx)
+- [Inventory](https://github.com/mkwitko/udv-sus-web/blob/main/src/pages/estoque.tsx)
+- [Preparation flows](https://github.com/mkwitko/udv-sus-web/blob/main/src/pages/preparos.tsx)
+- [Reporting](https://github.com/mkwitko/udv-sus-web/blob/main/src/pages/relatorios.tsx)
+- [API generation configuration](https://github.com/mkwitko/udv-sus-web/blob/main/orval.config.ts)
 
-**Source references**
+This repo demonstrates a React/TypeScript UI with multiple operational domains and a generated data-client approach. Other components of this family are intentionally not linked while privacy and ownership checks remain open.
 
-- [Route structure](https://github.com/mkwitko/finance-app/tree/master/src/app)
-- [API client and query setup](https://github.com/mkwitko/finance-app/tree/master/src/api)
-- [Household store](https://github.com/mkwitko/finance-app/blob/master/src/stores/household-store.ts)
-- [Transaction screen](https://github.com/mkwitko/finance-app/blob/master/src/app/%28tabs%29/transactions.tsx)
-- [Subscription-gated insights](https://github.com/mkwitko/finance-app/blob/master/src/app/%28tabs%29/insights.tsx)
+**Trade-offs to evaluate:** query consistency, authorization on mutations, domain isolation, multi-role navigation, operational edge cases, accessibility and error recovery.
 
-**Trade-offs:** shared server cache vs small local UI state, navigation structure, platform configuration, and protecting private runtime keys. No App Store release or external API reliability is claimed.
+## 3. Planting platform: route-driven Fastify API
 
-## 3. Real-time frontend: event-driven UI updates
+**Public source:** [udv-plantio-back](https://github.com/mkwitko/udv-plantio-back)
 
-**Repository:** [lunajoy-front](https://github.com/mkwitko/lunajoy-front)
+- [Authentication](https://github.com/mkwitko/udv-plantio-back/blob/main/src/routes/authentication-route.ts)
+- [Planting records](https://github.com/mkwitko/udv-plantio-back/blob/main/src/routes/plants.ts)
+- [Plant types](https://github.com/mkwitko/udv-plantio-back/blob/main/src/routes/plant-type.ts)
+- [Planting calendar](https://github.com/mkwitko/udv-plantio-back/blob/main/src/routes/plantation-calendar-date.ts)
+- [Uploads](https://github.com/mkwitko/udv-plantio-back/blob/main/src/routes/upload-route.ts)
 
-```mermaid
-flowchart LR
-  API["Backend REST API"] --> Hooks["Orval-generated React Query hooks"]
-  Hooks --> Cache["TanStack Query cache"]
-  Cache --> View["Dashboard / charts / streaks"]
-  Events["Ably events"] --> Handler["React event handler"]
-  Handler --> Cache
-```
+The code offers useful examples of route boundaries, schema validation and data workflows. Mobile and web variants must not be treated as public until approved.
 
-The [home route implementation](https://github.com/mkwitko/lunajoy-front/blob/main/src/pages/protected/home/home.tsx) subscribes to a daily-log event and updates cached data. The [Orval config](https://github.com/mkwitko/lunajoy-front/blob/main/orval.config.ts) describes the generated client from a Swagger document.
+**Trade-offs to evaluate:** file-upload security, permissions, schema evolution, date/time logic, data integrity and storage lifecycle.
 
-**Trade-offs:** cache consistency and event deduplication, real-time event ordering, re-fetch policies, and clear error/loading states. The code shows a strategy, not independently tested delivery guarantees.
+## 4. Event site: product experience and privacy
 
-## What these cases do *not* assert
+**Public source:** [casamento](https://github.com/mkwitko/casamento)
 
-No invented throughput, latency, customer count, security certification, scalability benchmark, production deployment, or test-success claim. Professional performance improvement claims on the profile are from the CV rather than inferred from these repositories.
+React, routing and Firebase configuration support an event website. Its [README](https://github.com/mkwitko/casamento/blob/master/README.md) and [design guide](https://github.com/mkwitko/casamento/blob/master/DESIGN.md) describe product decisions and QA.
 
-**Next evidence to collect:** real application screenshots with anonymized content, passing workflow links, test summaries, and measurements before/after an optimization. See [Showcase checklist](SHOWCASE_CHECKLIST.md).
+**Portfolio rule:** never republish guest information, phone numbers, RSVP contents, personal photographs or location/event details into case studies unless explicitly approved. Public source does not imply permission to redistribute every asset or data item.
+
+## What is not asserted
+
+The following require independent evidence before addition: number of users, revenue, availability, p95 latency, test coverage, security certification, production scale, app store releases and screenshot accuracy.
+
+## Next evidence to collect
+
+- [ ] Permission to feature employer/client/association-owned systems and brand assets.
+- [ ] Complete secret scanning of Git history and remediation of historical credentials.
+- [ ] Real anonymized screenshots/demo accounts for each public system.
+- [ ] Successful, reproducible CI results and build/test commands.
+- [ ] Measured results with methods/environment.
+- [ ] Safe disclosure reviews before converting any currently private repository.
