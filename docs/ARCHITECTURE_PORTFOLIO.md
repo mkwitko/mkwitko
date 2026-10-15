@@ -8,7 +8,7 @@ Evidence-based engineering case studies from public repositories. Each link belo
 
 ### Responsibilities and boundaries
 
-\`\`\`mermaid
+```mermaid
 flowchart TD
   User["Browser / store manager"] --> F["TanStack Start file routes"]
   F --> L["SSR loader"]
@@ -22,7 +22,7 @@ flowchart TD
   U --> G["Gateway interface"]
   R --> DB[("PostgreSQL via Prisma")]
   G --> Ext["Payments / integrations"]
-\`\`\`
+```
 
 **Why this architecture is interesting**
 
@@ -38,7 +38,7 @@ flowchart TD
 
 **Repository:** [finance-app](https://github.com/mkwitko/finance-app)
 
-\`\`\`mermaid
+```mermaid
 flowchart TD
   R["Expo Router"] --> Screens["Today / Transactions / Insights / Settings"]
   Screens --> Query["Generated API hooks + TanStack Query"]
@@ -46,7 +46,7 @@ flowchart TD
   Screens --> UI["Shared React Native UI"]
   Query --> HTTP["Configured backend API"]
   Screens --> Native["Native integrations"]
-\`\`\`
+```
 
 **Source references**
 
@@ -62,14 +62,14 @@ flowchart TD
 
 **Repository:** [lunajoy-front](https://github.com/mkwitko/lunajoy-front)
 
-\`\`\`mermaid
+```mermaid
 flowchart LR
   API["Backend REST API"] --> Hooks["Orval-generated React Query hooks"]
   Hooks --> Cache["TanStack Query cache"]
   Cache --> View["Dashboard / charts / streaks"]
   Events["Ably events"] --> Handler["React event handler"]
   Handler --> Cache
-\`\`\`
+```
 
 The [home route implementation](https://github.com/mkwitko/lunajoy-front/blob/main/src/pages/protected/home/home.tsx) subscribes to a daily-log event and updates cached data. The [Orval config](https://github.com/mkwitko/lunajoy-front/blob/main/orval.config.ts) describes the generated client from a Swagger document.
 
