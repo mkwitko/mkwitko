@@ -1,6 +1,6 @@
 # Architecture portfolio — selected systems
 
-Architecture notes for publicly inspectable projects in this curated professional portfolio. **The diagrams summarize code structure; they are not assertions about production topology, uptime or real performance.**
+Architecture notes for publicly inspectable projects in this professional portfolio. **The diagrams summarize code structure; they are not assertions about production topology, uptime or real performance.**
 
 ## 1. Camisa7: mobile + web + backend boundaries
 
@@ -29,35 +29,23 @@ flowchart TD
 
 **How to inspect:** follow a read/write interaction from one of the mobile/web routes through a generated HTTP client into the backend HTTP layer and service. Review tests and logs before claiming reliability.
 
-## 2. Sustainability management: web UI and domain workflows
+## 2. E-commerce: storefront and API
 
-**Public source:** [udv-sus-web](https://github.com/mkwitko/udv-sus-web)
+**Public source:** [ecommerce-storefront](https://github.com/mkwitko/ecommerce-storefront) · [ecommerce-api](https://github.com/mkwitko/ecommerce-api)
 
-- [Dashboard](https://github.com/mkwitko/udv-sus-web/blob/main/src/pages/dashboard.tsx)
-- [Inventory](https://github.com/mkwitko/udv-sus-web/blob/main/src/pages/estoque.tsx)
-- [Preparation flows](https://github.com/mkwitko/udv-sus-web/blob/main/src/pages/preparos.tsx)
-- [Reporting](https://github.com/mkwitko/udv-sus-web/blob/main/src/pages/relatorios.tsx)
-- [API generation configuration](https://github.com/mkwitko/udv-sus-web/blob/main/orval.config.ts)
+A web storefront for community stores (products, events, campaigns, raffles, donations) backed by a REST API for stores, products, orders and donations, with payment by Pix (Woovi) or card (Stripe), per the repository descriptions.
 
-This repo demonstrates a React/TypeScript UI with multiple operational domains and a generated data-client approach. Other components of this family are intentionally not linked while privacy and ownership checks remain open.
+**Trade-offs to evaluate:** payment webhook idempotency, order state transitions, authorization per store, and provider isolation.
 
-**Trade-offs to evaluate:** query consistency, authorization on mutations, domain isolation, multi-role navigation, operational edge cases, accessibility and error recovery.
+## 3. Planting geolocation: offline-first app and API
 
-## 3. Planting platform: route-driven Fastify API
+**Public source:** [planting-geotracker-app](https://github.com/mkwitko/planting-geotracker-app) · [planting-geotracker-api](https://github.com/mkwitko/planting-geotracker-api)
 
-**Public source:** [udv-plantio-back](https://github.com/mkwitko/udv-plantio-back)
+An offline-first mobile app registers plantings on a map with averaged GPS coordinates and photos, synced to a REST API that stores geolocated plant records with centre-scoped access.
 
-- [Authentication](https://github.com/mkwitko/udv-plantio-back/blob/main/src/routes/authentication-route.ts)
-- [Planting records](https://github.com/mkwitko/udv-plantio-back/blob/main/src/routes/plants.ts)
-- [Plant types](https://github.com/mkwitko/udv-plantio-back/blob/main/src/routes/plant-type.ts)
-- [Planting calendar](https://github.com/mkwitko/udv-plantio-back/blob/main/src/routes/plantation-calendar-date.ts)
-- [Uploads](https://github.com/mkwitko/udv-plantio-back/blob/main/src/routes/upload-route.ts)
+**Trade-offs to evaluate:** offline sync conflicts, upload security, permissions and data integrity.
 
-The code offers useful examples of route boundaries, schema validation and data workflows. Mobile and web variants must not be treated as public until approved.
-
-**Trade-offs to evaluate:** file-upload security, permissions, schema evolution, date/time logic, data integrity and storage lifecycle.
-
-## 4. Event site: product experience and privacy
+## 4. Event website: product experience and privacy
 
 **Public source:** [casamento](https://github.com/mkwitko/casamento)
 
@@ -77,3 +65,7 @@ The following require independent evidence before addition: number of users, rev
 - [ ] Successful, reproducible CI results and build/test commands.
 - [ ] Measured results with methods/environment.
 - [ ] Safe disclosure reviews before converting any currently private repository.
+
+## Other product families
+
+Further families are listed in the [README](../README.md): AI content factory ([ai-content-factory](https://github.com/mkwitko/ai-content-factory)), labor-claim calculations ([labor-calculations-api](https://github.com/mkwitko/labor-calculations-api)), ambulance fleet management ([comms](https://github.com/mkwitko/ambulance-fleet-comms), [driver](https://github.com/mkwitko/ambulance-fleet-driver)), field data tracking ([app](https://github.com/mkwitko/accounting-management-app), [web](https://github.com/mkwitko/accounting-management-web)) and a [Framer plugin](https://github.com/mkwitko/framer-site-capture-plugin). Private repositories are not linked.

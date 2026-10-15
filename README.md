@@ -26,20 +26,24 @@ At B2B Reservas, I work as a Senior Software Engineer. I reworked the core platf
 
 I co-founded Prosperapps with a technical mentor and delivered software for football clubs, healthcare companies and content creators, including real-time tools for live content. The venture was later discontinued. I began my career at Embber, a startup in Porto Alegre’s Tecnopuc ecosystem, and later joined Smarte, where I developed a strong foundation in clean code and software architecture.
 
-### Public work · selected project families
+### Public work · product families
 
-The repositories below are currently public and link to actual source code. Multi-repository products are shown as **systems**, rather than a random set of unrelated repos.
+Multi-repository products are shown as **systems**. Private repositories are listed by name only and not linked.
 
-| System | Public implementation | Engineering focus |
+| System | Repositories | Focus |
 | :-- | :-- | :-- |
-| **Camisa7 — sports platform** | [Mobile](https://github.com/mkwitko/camisa7-app) · [Backend](https://github.com/mkwitko/camisa7-api) · [Web](https://github.com/mkwitko/camisa7-web) | Expo Router, Fastify/Prisma, React, generated API contracts and test tooling |
-| **Sustainability management** | [Web](https://github.com/mkwitko/udv-sus-web) | React, TypeScript, dashboards, reporting and typed data access |
-| **Planting platform** | [Backend](https://github.com/mkwitko/udv-plantio-back) | Fastify, Prisma, validation, routes and integration boundaries |
-| **Event website** | [React + Firebase project](https://github.com/mkwitko/casamento) | Responsive product experience, registration flows and Firebase integrations |
+| **AI Content Factory** | [Source](https://github.com/mkwitko/ai-content-factory) | Turns affiliate offers into scripts, images and narrated Reels, with a human review queue and an MCP server. |
+| **E-commerce** | [Storefront](https://github.com/mkwitko/ecommerce-storefront) · [API](https://github.com/mkwitko/ecommerce-api) | Community storefront for products, events, campaigns, raffles and donations, with a REST API handling orders and Pix or card payments. |
+| **Labor-Claim Calculations** | [API](https://github.com/mkwitko/labor-calculations-api) · Web (private) | Multi-tenant API that computes Brazilian labor-claim settlements and manages cases with DataJud docket sync, plus a web client with public calculators. |
+| **Ambulance Fleet Management** | [Comms app](https://github.com/mkwitko/ambulance-fleet-comms) · [Driver app](https://github.com/mkwitko/ambulance-fleet-driver) · API (private) · App (private) · Dashboard (private) | Fleet operations platform: tenant backend, operator console, and mobile apps for crew chat, push-to-talk radio, dispatch alerts and driver check-in by QR code. |
+| **AI Growth OS** | API (private) · Web app (private) | Growth operating system with business context, goals, strategies and experiments; the backend adds an agent runtime with budgets and tracing, credit billing and social publishing. |
+| **Planting Geolocation** | [App](https://github.com/mkwitko/planting-geotracker-app) · [API](https://github.com/mkwitko/planting-geotracker-api) | Offline-first mobile app that registers plantings on a map with averaged GPS coordinates and photos, synced to a REST API with centre-scoped access. |
+| **Field Data Tracking** | [App](https://github.com/mkwitko/accounting-management-app) · [Web](https://github.com/mkwitko/accounting-management-web) · API (private) | Field data tracking system: a mobile app to record preparations, sessions and stock per unit, a read-only admin panel with reports by region, and a backend with role-based access. |
+| **Camisa7 · Pickup Football** | [Mobile](https://github.com/mkwitko/camisa7-app) · [API](https://github.com/mkwitko/camisa7-api) · [Web](https://github.com/mkwitko/camisa7-web) | Organizer for pickup football: groups, matches, presence, PIX payments, ratings and rankings, with a public web companion for invites and player profiles. |
+| **Framer Plugin** | [Source](https://github.com/mkwitko/framer-site-capture-plugin) | Framer plugin that captures a published website and composes presentation-ready portfolio mockups. |
+| **Event Website** | [Source](https://github.com/mkwitko/casamento) | Event website with personal invitation links, RSVP form and an admin panel. Personal data is not republished here. |
 
 **[Inspect architectural boundaries, trade-offs and code references →](./docs/ARCHITECTURE_PORTFOLIO.md)**
-
-> The project families above are a **curated public subset**, not a complete inventory of my account. Other systems are being reviewed for safe publication and permission to disclose source. Private implementations, business data and internal access details are deliberately not linked.
 
 ### Engineering areas
 
