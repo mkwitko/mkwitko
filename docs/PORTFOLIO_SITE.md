@@ -29,8 +29,12 @@ This folder contains a lightweight, responsive engineering portfolio site in Eng
 
 ## Content sourcing
 
-Statements reference existing CVs and the following publicly inspectable sources: `udv-shop`, `udv-shop-api`, `finance-app`, `lunajoy-front`. A 3s→150ms career achievement appears in the resume, **not** as a benchmark independently derived from these GitHub projects.
+Statements reference existing CVs and the explicitly selected, publicly inspectable repositories: `futebol-app`, `futebol-back`, `futebol-web`, `udv-sus-web`, `udv-plantio-back`, and `casamento`. Other selected projects remain private pending safe-publication review. A 3s→150ms career achievement appears in the resume, **not** as a benchmark independently derived from these GitHub repositories.
 
 ## Pages URL caution
 
 The publication URL above is the conventional GitHub Pages URL, not an assertion that the site is already enabled or reachable.
+
+## Curation policy
+
+Only source from the owner's named portfolio families may appear on the public site. Unselected public repositories are not featured and should be changed to private using the owner's GitHub repository Settings (the currently connected GitHub integration cannot change repository visibility). Do not add links to unreviewed private code or publish screenshots from client/community systems without appropriate rights and privacy checks.
