@@ -5,6 +5,8 @@
 
 **Senior Software Engineer · Full Stack · Backend · Mobile · Applied AI**
 
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&duration=3500&pause=900&color=58A6FF&center=true&vCenter=true&width=560&height=40&lines=React+%C2%B7+React+Native+%C2%B7+Node.js+%C2%B7+TypeScript;Fastify%2C+Prisma+and+PostgreSQL+APIs;LLM+pipelines+with+evaluation+and+human+review;Open+to+remote+international+roles" alt="React, React Native, Node.js, TypeScript. Fastify, Prisma and PostgreSQL APIs. LLM pipelines with evaluation and human review. Open to remote international roles." />
+
 Building products with React, React Native, Node.js and maintainable system architecture.
 
 **Florianópolis, Brazil · Open to remote international roles**
@@ -61,6 +63,21 @@ flowchart LR
 ```
 
 This is a **conceptual summary of the Camisa7 repository family**, not a verified deployment or performance benchmark. Explore the implementation before drawing conclusions about readiness.
+
+### GitHub activity
+
+<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=mkwitko&show_icons=true&hide_border=true&theme=github_dark" />
+  <img height="165" alt="GitHub stats for mkwitko" src="https://github-readme-stats.vercel.app/api?username=mkwitko&show_icons=true&hide_border=true&theme=default" />
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=mkwitko&layout=compact&hide_border=true&theme=github_dark" />
+  <img height="165" alt="Most used languages in public repositories" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mkwitko&layout=compact&hide_border=true&theme=default" />
+</picture>
+</div>
+
+<sub>Counts cover public repositories only; most client and employer work is private.</sub>
 
 ### Contact
 
