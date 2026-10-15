@@ -23,7 +23,7 @@ For each project, aim for:
 - Anonymization of credentials, emails, addresses, payment details, tokens, personally identifying information and internal URLs.
 - A verified demo link **only if** public access is intentionally allowed and safe.
 
-Add files under each repository's \`docs/media/\` and link from the project README. Prefer compressed PNG/WebP for screenshots; add descriptive alternative text.
+Add files under each repository's `docs/media/` and link from the project README. Prefer compressed PNG/WebP for screenshots; add descriptive alternative text.
 
 ## Architecture credibility checklist
 
@@ -47,7 +47,7 @@ Add files under each repository's \`docs/media/\` and link from the project READ
 ## GitHub settings — actions requiring the profile owner
 
 1. Open [your profile](https://github.com/mkwitko) → **Customize your pins**. Select the four repositories above.
-2. Add a concise GitHub bio, for example: \`Senior Software Engineer | React, Node.js, React Native & Applied AI | Open to remote roles\`.
+2. Add a concise GitHub bio, for example: `Senior Software Engineer | React, Node.js, React Native & Applied AI | Open to remote roles`.
 3. Add a working portfolio/LinkedIn URL only after confirming the correct public account.
 4. Check that the displayed contact email is intended to be public.
 5. Consider enabling private contribution counts in profile settings without disclosing repository names or details.
