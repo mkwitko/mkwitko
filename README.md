@@ -18,7 +18,11 @@ Building products with React, React Native, Node.js and maintainable system arch
 
 I have **7+ years** of hands-on engineering experience, including technical leadership, architecture, mentoring and product delivery. My background covers React/TypeScript experiences, Fastify/Node.js APIs, React Native apps, integrations, data contracts and AI-assisted workflows.
 
-At Ezoom, I progressed to Tech Lead within nine months. My professional CV records an API response-time improvement from **3 seconds to 150 milliseconds (20×)**; this result is *not* attributed to any of the public projects below.
+At Ezoom, I progressed to Tech Lead within nine months and led a team of more than seven developers. I worked with the founders and product leadership, contributed to hiring, and helped reduce API response time from **3 seconds to 150 milliseconds (20×)**. This result is *not* attributed to any of the public projects below.
+
+At B2B Reservas, I work as a Senior Software Engineer. I reworked the core platform behind the company’s product portfolio and contribute to three new products seen internally as strategic innovation initiatives. I also lead and coach developers in using Claude Code and AI-assisted engineering practices effectively.
+
+I co-founded Prosperapps with a technical mentor and delivered software for football clubs, healthcare companies and content creators, including real-time tools for live content. The venture was later discontinued. I began my career at Embber, a startup in Porto Alegre’s Tecnopuc ecosystem, and later joined Smarte, where I developed a strong foundation in clean code and software architecture.
 
 ### Public work · selected project families
 
