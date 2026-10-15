@@ -4,7 +4,7 @@ Architecture notes for publicly inspectable projects in this curated professiona
 
 ## 1. Camisa7: mobile + web + backend boundaries
 
-**Public source:** [React Native app](https://github.com/mkwitko/futebol-app) · [Backend API](https://github.com/mkwitko/futebol-back) · [React web app](https://github.com/mkwitko/futebol-web)
+**Public source:** [React Native app](https://github.com/mkwitko/camisa7-app) · [Backend API](https://github.com/mkwitko/camisa7-api) · [React web app](https://github.com/mkwitko/camisa7-web)
 
 ```mermaid
 flowchart TD
@@ -21,11 +21,11 @@ flowchart TD
 
 | Responsibility | Evidence | Engineering trade-off |
 | --- | --- | --- |
-| Mobile navigation and native integrations | [Mobile app routes](https://github.com/mkwitko/futebol-app/tree/master/src/app) | Platform-specific behavior and runtime permissions |
-| Frontend state and generated bindings | [Web client](https://github.com/mkwitko/futebol-web/tree/master/src/api) | Contract generation must remain synchronized |
-| Typed API and explicit server boundary | [Backend HTTP modules](https://github.com/mkwitko/futebol-back/tree/master/src/http) | Consistent validation and authorization across routes |
-| Provider isolation | [Gateways](https://github.com/mkwitko/futebol-back/tree/master/src/gateways) | Abstraction reduces coupling but increases maintenance cost |
-| Background processing | [Jobs](https://github.com/mkwitko/futebol-back/tree/master/src/jobs) | Requires reliable retry, idempotency and observability |
+| Mobile navigation and native integrations | [Mobile app routes](https://github.com/mkwitko/camisa7-app/tree/master/src/app) | Platform-specific behavior and runtime permissions |
+| Frontend state and generated bindings | [Web client](https://github.com/mkwitko/camisa7-web/tree/master/src/api) | Contract generation must remain synchronized |
+| Typed API and explicit server boundary | [Backend HTTP modules](https://github.com/mkwitko/camisa7-api/tree/master/src/http) | Consistent validation and authorization across routes |
+| Provider isolation | [Gateways](https://github.com/mkwitko/camisa7-api/tree/master/src/gateways) | Abstraction reduces coupling but increases maintenance cost |
+| Background processing | [Jobs](https://github.com/mkwitko/camisa7-api/tree/master/src/jobs) | Requires reliable retry, idempotency and observability |
 
 **How to inspect:** follow a read/write interaction from one of the mobile/web routes through a generated HTTP client into the backend HTTP layer and service. Review tests and logs before claiming reliability.
 

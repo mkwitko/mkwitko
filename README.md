@@ -26,7 +26,7 @@ The repositories below are currently public and link to actual source code. Mult
 
 | System | Public implementation | Engineering focus |
 | :-- | :-- | :-- |
-| **Camisa7 — sports platform** | [Mobile](https://github.com/mkwitko/futebol-app) · [Backend](https://github.com/mkwitko/futebol-back) · [Web](https://github.com/mkwitko/futebol-web) | Expo Router, Fastify/Prisma, React, generated API contracts and test tooling |
+| **Camisa7 — sports platform** | [Mobile](https://github.com/mkwitko/camisa7-app) · [Backend](https://github.com/mkwitko/camisa7-api) · [Web](https://github.com/mkwitko/camisa7-web) | Expo Router, Fastify/Prisma, React, generated API contracts and test tooling |
 | **Sustainability management** | [Web](https://github.com/mkwitko/udv-sus-web) | React, TypeScript, dashboards, reporting and typed data access |
 | **Planting platform** | [Backend](https://github.com/mkwitko/udv-plantio-back) | Fastify, Prisma, validation, routes and integration boundaries |
 | **Event website** | [React + Firebase project](https://github.com/mkwitko/casamento) | Responsive product experience, registration flows and Firebase integrations |
