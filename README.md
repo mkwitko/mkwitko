@@ -1,75 +1,67 @@
 <div align="center">
-
-<img src="./assets/engineering-banner.svg" alt="Mauricio Kwitko — software engineering, architecture and applied AI" width="100%" />
+<img src="./assets/engineering-banner.svg" alt="Mauricio Kwitko — senior software engineer and technical lead" width="100%" />
 
 # Mauricio Kwitko
 
-**Senior Software Engineer · Full Stack & Technical Leadership**
+**Senior Software Engineer · Full Stack · Backend · Mobile · Applied AI**
 
-React / Next.js · Node.js / Fastify · React Native · System Design · Applied AI
+Building products with React, React Native, Node.js and maintainable system architecture.
 
-**Florianópolis, Brazil · Available for remote international opportunities**
+**Florianópolis, Brazil · Open to remote international roles**
 
-[Email me](mailto:mauriciokwt@gmail.com) · [Architecture case studies](./docs/ARCHITECTURE_PORTFOLIO.md) · [Portfolio index](#selected-engineering-work)
-
+[Engineering portfolio](./docs/index.html) · [Architecture deep dives](./docs/ARCHITECTURE_PORTFOLIO.md) · [Email](mailto:mauriciokwt@gmail.com)
 </div>
 
 ---
 
-### About me
+### What I do
 
-I am a software engineer with **7+ years of experience** building and evolving web, mobile, and real-time products. My background spans hands-on implementation, architectural decisions, platform refactoring, and mentoring teams.
+I have **7+ years** of hands-on engineering experience, including technical leadership, architecture, mentoring and product delivery. My background covers React/TypeScript experiences, Fastify/Node.js APIs, React Native apps, integrations, data contracts and AI-assisted workflows.
 
-At Ezoom, I progressed from developer to Tech Lead in nine months and worked on an API redesign that reduced average response time from **3s to 150ms** (20× faster). At B2B Reservas, I have led engineering standards and a core-platform refactor.
+At Ezoom, I progressed to Tech Lead within nine months. My professional CV records an API response-time improvement from **3 seconds to 150 milliseconds (20×)**; this result is *not* attributed to any of the public projects below.
 
-I care about **maintainable systems, thoughtful product UX, measurable performance, clear contracts, and pragmatic delivery**.
+### Public work · selected project families
 
-### Selected engineering work
+The repositories below are currently public and link to actual source code. Multi-repository products are shown as **systems**, rather than a random set of unrelated repos.
 
-| Area | Project | What the source demonstrates |
+| System | Public implementation | Engineering focus |
 | :-- | :-- | :-- |
-| **Full Stack / Frontend** | [Community Storefront — Web](https://github.com/mkwitko/udv-shop) | React 19, TanStack Start, typed OpenAPI clients, SSR data flow, Cloudflare Workers configuration |
-| **Backend / Architecture** | [Community Storefront — API](https://github.com/mkwitko/udv-shop-api) | Fastify, Prisma/PostgreSQL, use-case slices, explicit permissions, gateway interfaces, integration tests |
-| **Mobile** | [Finance App](https://github.com/mkwitko/finance-app) | React Native, Expo Router, API generation, household and transaction flows, localization |
-| **Frontend / Real-Time** | [LunaJoy Frontend](https://github.com/mkwitko/lunajoy-front) | React, TanStack Query, Recharts, Ably events, typed API integration |
+| **Camisa7 — sports platform** | [Mobile](https://github.com/mkwitko/futebol-app) · [Backend](https://github.com/mkwitko/futebol-back) · [Web](https://github.com/mkwitko/futebol-web) | Expo Router, Fastify/Prisma, React, generated API contracts and test tooling |
+| **Sustainability management** | [Web](https://github.com/mkwitko/udv-sus-web) | React, TypeScript, dashboards, reporting and typed data access |
+| **Planting platform** | [Backend](https://github.com/mkwitko/udv-plantio-back) | Fastify, Prisma, validation, routes and integration boundaries |
+| **Event website** | [React + Firebase project](https://github.com/mkwitko/casamento) | Responsive product experience, registration flows and Firebase integrations |
 
-**[Explore the architecture behind these projects →](./docs/ARCHITECTURE_PORTFOLIO.md)**
+**[Inspect architectural boundaries, trade-offs and code references →](./docs/ARCHITECTURE_PORTFOLIO.md)**
 
-### Engineering specializations
+> The project families above are a **curated public subset**, not a complete inventory of my account. Other systems are being reviewed for safe publication and permission to disclose source. Private implementations, business data and internal access details are deliberately not linked.
 
-| Frontend & experience | Backend & architecture | Mobile & delivery | Applied AI |
-| :-- | :-- | :-- | :-- |
-| React, Next.js, TypeScript | Node.js, Fastify, NestJS | React Native, Expo | LLM integrations |
-| Design systems, UI/UX | PostgreSQL, Prisma, Zod | Mobile state and navigation | Tool-based agents |
-| SSR, performance, testing | OpenAPI, auth, API design | CI/CD, Docker, Cloudflare | Evaluation and media pipelines |
+### Engineering areas
 
-### An architecture I like working with
+- **Frontend:** React, Next.js, TypeScript, responsive product UX, accessible components, TanStack Query.
+- **Backend:** Node.js, Fastify, NestJS, PostgreSQL, Prisma, OpenAPI, authentication, integration adapters.
+- **Mobile:** React Native, Expo Router, API integration, native workflows and animations.
+- **Applied AI:** LLM integrations, orchestration, tool use, evaluation and human-in-the-loop pipelines.
+- **Delivery:** Docker, CI, contract validation and pragmatic system boundaries.
 
-The public storefront and API illustrate a design approach that keeps UI, generated API contracts, business use cases, and infrastructure responsibilities separate.
+### How I think about architecture
 
 ```mermaid
 flowchart LR
-  U["Store visitors / managers"] --> W["React / TanStack Start"]
-  W --> Q["TanStack Query"]
-  Q --> C["Generated OpenAPI client"]
-  C --> A["Fastify + Zod routes"]
-  A --> S["Application use cases"]
-  S --> R["Repository interfaces"]
-  S --> G["Gateway interfaces"]
-  R --> P[("PostgreSQL")]
-  G --> E["External providers"]
+  M["Mobile / Expo"] --> C["Generated API contract"]
+  W["Web / React"] --> C
+  C --> API["Fastify routes + validation"]
+  API --> S["Application services"]
+  S --> R["Repositories"]
+  S --> G["Provider gateways"]
+  R --> DB[("PostgreSQL")]
 ```
 
-**[Implementation notes, trade-offs and code references →](./docs/ARCHITECTURE_PORTFOLIO.md)**
-
-### Engineering beyond public code
-
-I also work on private AI-assisted content tooling with API/tool interfaces, background workers and evaluation pipelines. I can discuss approaches and trade-offs without publishing private implementation details or production data. Public projects above are the primary source-verifiable examples.
+This is a **conceptual summary of the Camisa7 repository family**, not a verified deployment or performance benchmark. Explore the implementation before drawing conclusions about readiness.
 
 ### Contact
 
-**Open to:** Senior Frontend, Senior Full Stack, Senior Backend, React Native and Applied AI engineering opportunities.
+Senior Frontend · Full Stack · Backend · React Native · Applied AI engineering
 
-[mauriciokwt@gmail.com](mailto:mauriciokwt@gmail.com) · Florianópolis, Brazil (UTC−3)
+[mauriciokwt@gmail.com](mailto:mauriciokwt@gmail.com) · Remote-friendly, UTC−3
 
-<sub>Statements about experience are drawn from my professional CV; technical project descriptions are grounded in the linked source. Production status, usage and quality metrics are not asserted without evidence.</sub>
+<sub>All technical case studies are based on source currently visible in the linked repositories. Live deployment, successful current CI, traffic, adoption and quality metrics must be verified separately.</sub>
