@@ -47,7 +47,7 @@ I care about **maintainable systems, thoughtful product UX, measurable performan
 
 The public storefront and API illustrate a design approach that keeps UI, generated API contracts, business use cases, and infrastructure responsibilities separate.
 
-\`\`\`mermaid
+```mermaid
 flowchart LR
   U["Store visitors / managers"] --> W["React / TanStack Start"]
   W --> Q["TanStack Query"]
@@ -58,7 +58,7 @@ flowchart LR
   S --> G["Gateway interfaces"]
   R --> P[("PostgreSQL")]
   G --> E["External providers"]
-\`\`\`
+```
 
 **[Implementation notes, trade-offs and code references →](./docs/ARCHITECTURE_PORTFOLIO.md)**
 
