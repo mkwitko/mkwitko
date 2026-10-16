@@ -1,0 +1,481 @@
+{
+ "families": [
+  {
+   "id": "applied-ai",
+   "label": "APPLIED AI",
+   "blurb": "LLM pipelines that are measured, budgeted and kept behind a human review step.",
+   "repos": [
+    {
+     "name": "affiliate-content-factory",
+     "url": "https://github.com/mkwitko/affiliate-content-factory",
+     "api": null,
+     "siblings": [],
+     "lead": true,
+     "what": "Turns affiliate offers into reviewed social posts, branded images and narrated Reels.",
+     "stack": "TypeScript monorepo · Fastify · Prisma/PostgreSQL · MCP server · local and hosted models",
+     "decision": "Every claim in generated copy must trace to a verified price or evidence record; nothing publishes without an approved package.",
+     "frames": [
+      {
+       "n": 11,
+       "stem": "01-approve-queue",
+       "thumb": "shots/affiliate-content-factory--01-approve-queue-t.jpg",
+       "print": "shots/affiliate-content-factory--01-approve-queue.jpg",
+       "w": 1600,
+       "h": 1007,
+       "caption": "Operator panel (thermal design), packages awaiting approval"
+      },
+      {
+       "n": 12,
+       "stem": "02-package-ticket",
+       "thumb": "shots/affiliate-content-factory--02-package-ticket-t.jpg",
+       "print": "shots/affiliate-content-factory--02-package-ticket.jpg",
+       "w": 1600,
+       "h": 1007,
+       "caption": "Approval ticket with slide previews, copy, price, Return/Approve"
+      },
+      {
+       "n": 13,
+       "stem": "03-content",
+       "thumb": "shots/affiliate-content-factory--03-content-t.jpg",
+       "print": "shots/affiliate-content-factory--03-content.jpg",
+       "w": 1600,
+       "h": 1007,
+       "caption": "Content list"
+      },
+      {
+       "n": 14,
+       "stem": "04-offers",
+       "thumb": "shots/affiliate-content-factory--04-offers-t.jpg",
+       "print": "shots/affiliate-content-factory--04-offers.jpg",
+       "w": 1600,
+       "h": 1007,
+       "caption": "Offers desk"
+      },
+      {
+       "n": 15,
+       "stem": "05-results",
+       "thumb": "shots/affiliate-content-factory--05-results-t.jpg",
+       "print": "shots/affiliate-content-factory--05-results.jpg",
+       "w": 1600,
+       "h": 1007,
+       "caption": "Results desk"
+      }
+     ]
+    },
+    {
+     "name": "aurea-web-app",
+     "url": "https://github.com/mkwitko/aurea-web-app",
+     "api": "aurea-api",
+     "siblings": [],
+     "lead": false,
+     "what": "React front end of an AI growth operating system: business context, ICPs, goals, strategies, experiments, learnings.",
+     "stack": "React · TanStack Query · Kubb-generated client · Fastify API with agent runtime, budgets, tracing and Stripe credits",
+     "decision": "The agent runtime is metered per workspace and every AI fill is editable before it is saved.",
+     "frames": [
+      {
+       "n": 16,
+       "stem": "02-dashboard",
+       "thumb": "shots/aurea-web-app--02-dashboard-t.jpg",
+       "print": "shots/aurea-web-app--02-dashboard.jpg",
+       "w": 1600,
+       "h": 1000,
+       "caption": "Home with onboarding progress and recent activity."
+      },
+      {
+       "n": 17,
+       "stem": "03-business",
+       "thumb": "shots/aurea-web-app--03-business-t.jpg",
+       "print": "shots/aurea-web-app--03-business.jpg",
+       "w": 1600,
+       "h": 1000,
+       "caption": "Business profile and context sections."
+      },
+      {
+       "n": 18,
+       "stem": "04-icps",
+       "thumb": "shots/aurea-web-app--04-icps-t.jpg",
+       "print": "shots/aurea-web-app--04-icps.jpg",
+       "w": 1600,
+       "h": 1000,
+       "caption": "Ideal customer profiles (2 ICPs)."
+      },
+      {
+       "n": 19,
+       "stem": "06-strategies",
+       "thumb": "shots/aurea-web-app--06-strategies-t.jpg",
+       "print": "shots/aurea-web-app--06-strategies.jpg",
+       "w": 1600,
+       "h": 1000,
+       "caption": "Growth loop, Planos stage (1 active, 1 draft strategy)."
+      },
+      {
+       "n": 20,
+       "stem": "07-experiments",
+       "thumb": "shots/aurea-web-app--07-experiments-t.jpg",
+       "print": "shots/aurea-web-app--07-experiments.jpg",
+       "w": 1600,
+       "h": 1000,
+       "caption": "Growth loop, Testes stage (1 running, 1 draft)."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ecommerce",
+   "label": "E-COMMERCE",
+   "blurb": "Community stores with Pix and card payments, campaigns, raffles and donations.",
+   "repos": [
+    {
+     "name": "ecommerce-storefront",
+     "url": "https://github.com/mkwitko/ecommerce-storefront",
+     "api": "ecommerce-api",
+     "siblings": [],
+     "lead": false,
+     "what": "Web storefront for community stores: catalog, campaigns, raffles, donations, checkout.",
+     "stack": "React SSR on Cloudflare Workers · REST API (Fastify, Prisma) · Pix and card providers · Playwright e2e",
+     "decision": "Payments run through a provider adapter with a fake mode, so the full checkout is covered by end-to-end tests without real money.",
+     "frames": [
+      {
+       "n": 21,
+       "stem": "01-catalog",
+       "thumb": "shots/ecommerce-storefront--01-catalog-t.jpg",
+       "print": "shots/ecommerce-storefront--01-catalog.jpg",
+       "w": 1600,
+       "h": 1000,
+       "caption": "Store home, orange hero, \"Comprar/Apoiar/Compartilhar\" actions, active campaign card (R$ 300 of R$ 50.000, 1%), agenda start"
+      },
+      {
+       "n": 22,
+       "stem": "02-product",
+       "thumb": "shots/ecommerce-storefront--02-product-t.jpg",
+       "print": "shots/ecommerce-storefront--02-product.jpg",
+       "w": 1600,
+       "h": 1000,
+       "caption": "Product page, Camiseta Uniao R$ 89,00, quantity stepper, buy button, payment/delivery notes, seller block"
+      },
+      {
+       "n": 23,
+       "stem": "03-campaigns",
+       "thumb": "shots/ecommerce-storefront--03-campaigns-t.jpg",
+       "print": "shots/ecommerce-storefront--03-campaigns.jpg",
+       "w": 1600,
+       "h": 1000,
+       "caption": "Campaigns list with the \"Reforma do Templo\" card and progress bar, platform footer"
+      },
+      {
+       "n": 24,
+       "stem": "05-cart-checkout",
+       "thumb": "shots/ecommerce-storefront--05-cart-checkout-t.jpg",
+       "print": "shots/ecommerce-storefront--05-cart-checkout.jpg",
+       "w": 1600,
+       "h": 1000,
+       "caption": "Checkout step 1 of 2, product, quantity, phone, delivery info, note, Pix selected"
+      },
+      {
+       "n": 25,
+       "stem": "08-donation",
+       "thumb": "shots/ecommerce-storefront--08-donation-t.jpg",
+       "print": "shots/ecommerce-storefront--08-donation.jpg",
+       "w": 1600,
+       "h": 1000,
+       "caption": "Donation step 1 of 2, preset amounts, custom R$ 25,00, Pix selected, card unavailable, anonymous option"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "labor",
+   "label": "LABOR CALCULATIONS",
+   "blurb": "Brazilian labor-claim settlements, public calculators and docket sync.",
+   "repos": [
+    {
+     "name": "labor-calculations-web",
+     "url": "https://github.com/mkwitko/labor-calculations-web",
+     "api": "labor-calculations-api",
+     "siblings": [],
+     "lead": false,
+     "what": "Public calculators plus a lawyer workspace: cases, dockets, deadlines, settlement figures.",
+     "stack": "React · generated API client · multi-tenant API with DataJud docket sync",
+     "decision": "Calculation rules live in one versioned domain module shared by the public calculators and the case workspace.",
+     "frames": [
+      {
+       "n": 26,
+       "stem": "01-landing",
+       "thumb": "shots/labor-calculations-web--01-landing-t.jpg",
+       "print": "shots/labor-calculations-web--01-landing.jpg",
+       "w": 1600,
+       "h": 1000,
+       "caption": "Landing with the public calculators"
+      },
+      {
+       "n": 27,
+       "stem": "02-calculadora-trabalhador",
+       "thumb": "shots/labor-calculations-web--02-calculadora-trabalhador-t.jpg",
+       "print": "shots/labor-calculations-web--02-calculadora-trabalhador.jpg",
+       "w": 1600,
+       "h": 1000,
+       "caption": "Severance calculator, 7-step form"
+      },
+      {
+       "n": 28,
+       "stem": "05-painel",
+       "thumb": "shots/labor-calculations-web--05-painel-t.jpg",
+       "print": "shots/labor-calculations-web--05-painel.jpg",
+       "w": 1600,
+       "h": 1000,
+       "caption": "Lawyer workspace: cases and deadlines"
+      },
+      {
+       "n": 29,
+       "stem": "08-caso-visao-geral",
+       "thumb": "shots/labor-calculations-web--08-caso-visao-geral-t.jpg",
+       "print": "shots/labor-calculations-web--08-caso-visao-geral.jpg",
+       "w": 1600,
+       "h": 1000,
+       "caption": "Case overview with settlement figures"
+      },
+      {
+       "n": 30,
+       "stem": "09-caso-autos-andamentos",
+       "thumb": "shots/labor-calculations-web--09-caso-autos-andamentos-t.jpg",
+       "print": "shots/labor-calculations-web--09-caso-autos-andamentos.jpg",
+       "w": 1600,
+       "h": 1000,
+       "caption": "Case docket: filings and movements synced from DataJud"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fleet",
+   "label": "AMBULANCE FLEET",
+   "blurb": "Dispatch console, crew chat, push-to-talk radio and driver check-in.",
+   "repos": [
+    {
+     "name": "ambulance-fleet-dashboard",
+     "url": "https://github.com/mkwitko/ambulance-fleet-dashboard",
+     "api": "ambulance-fleet-api",
+     "siblings": [
+      "ambulance-fleet-app",
+      "ambulance-fleet-comms",
+      "ambulance-fleet-driver"
+     ],
+     "lead": false,
+     "what": "Operator console: vehicle control, ambulances and documents, bases, crews and chats.",
+     "stack": "React · Orval-generated client · multi-tenant Fastify API · realtime channels · React Native crew and driver apps",
+     "decision": "One OpenAPI contract generates the clients for the console and both mobile apps, so a backend change breaks at build time, not in the field.",
+     "frames": [
+      {
+       "n": 31,
+       "stem": "01-vehicle-control",
+       "thumb": "shots/ambulance-fleet-dashboard--01-vehicle-control-t.jpg",
+       "print": "shots/ambulance-fleet-dashboard--01-vehicle-control.jpg",
+       "w": 1600,
+       "h": 915,
+       "caption": "Ambulance control board (VTR status table, in-service/available meters, QAP/OCP/EVT/J4 chips)."
+      },
+      {
+       "n": 32,
+       "stem": "02-ambulances",
+       "thumb": "shots/ambulance-fleet-dashboard--02-ambulances-t.jpg",
+       "print": "shots/ambulance-fleet-dashboard--02-ambulances.jpg",
+       "w": 1600,
+       "h": 915,
+       "caption": "Ambulance list with plate, unit, base, status selector."
+      },
+      {
+       "n": 33,
+       "stem": "03-chats",
+       "thumb": "shots/ambulance-fleet-dashboard--03-chats-t.jpg",
+       "print": "shots/ambulance-fleet-dashboard--03-chats.jpg",
+       "w": 1600,
+       "h": 915,
+       "caption": "Radio/chat conversation list with unread counts, no thread open."
+      },
+      {
+       "n": 34,
+       "stem": "05-bases",
+       "thumb": "shots/ambulance-fleet-dashboard--05-bases-t.jpg",
+       "print": "shots/ambulance-fleet-dashboard--05-bases.jpg",
+       "w": 1600,
+       "h": 915,
+       "caption": "Bases list."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "field",
+   "label": "FIELD OPERATIONS",
+   "blurb": "Sessions, preparations and stock per unit and region, with role-based access.",
+   "repos": [
+    {
+     "name": "field-operations-tracker-web",
+     "url": "https://github.com/mkwitko/field-operations-tracker-web",
+     "api": "field-operations-tracker-api",
+     "siblings": [
+      "field-operations-tracker-app",
+      "planting-geotracker-app",
+      "planting-geotracker-api"
+     ],
+     "lead": false,
+     "what": "Read-only admin panel over field data: dashboard, stock, preparations, reports, sessions.",
+     "stack": "React · Firebase hosting · REST API · React Native field client · offline-first planting geotracker",
+     "decision": "The panel is read-only by design; every write goes through the mobile client where the operator is authenticated on device.",
+     "frames": [
+      {
+       "n": 35,
+       "stem": "01-dashboard",
+       "thumb": "shots/field-operations-tracker-web--01-dashboard-t.jpg",
+       "print": "shots/field-operations-tracker-web--01-dashboard.jpg",
+       "w": 1600,
+       "h": 910,
+       "caption": "Dashboard: units, regions and stock at a glance"
+      },
+      {
+       "n": 36,
+       "stem": "02-stock",
+       "thumb": "shots/field-operations-tracker-web--02-stock-t.jpg",
+       "print": "shots/field-operations-tracker-web--02-stock.jpg",
+       "w": 1600,
+       "h": 910,
+       "caption": "Stock per unit with movements"
+      },
+      {
+       "n": 37,
+       "stem": "03-preparations",
+       "thumb": "shots/field-operations-tracker-web--03-preparations-t.jpg",
+       "print": "shots/field-operations-tracker-web--03-preparations.jpg",
+       "w": 1600,
+       "h": 910,
+       "caption": "Preparations log per session"
+      },
+      {
+       "n": 38,
+       "stem": "04-reports",
+       "thumb": "shots/field-operations-tracker-web--04-reports-t.jpg",
+       "print": "shots/field-operations-tracker-web--04-reports.jpg",
+       "w": 1600,
+       "h": 910,
+       "caption": "Reports by period and region"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mobile",
+   "label": "MOBILE & CONTRACT-FIRST",
+   "blurb": "Pickup football: groups, matches, Pix payments, ratings.",
+   "repos": [
+    {
+     "name": "camisa7-web",
+     "url": "https://github.com/mkwitko/camisa7-web",
+     "api": "camisa7-api",
+     "siblings": [
+      "camisa7-app"
+     ],
+     "lead": false,
+     "what": "Public web companion: match invitations, guest confirmation, player profiles.",
+     "stack": "React · generated client from the API's OpenAPI · React Native app · Fastify API",
+     "decision": "The web companion exists so a guest can confirm a match from a link without installing the app.",
+     "frames": [
+      {
+       "n": 39,
+       "stem": "02-invite-open",
+       "thumb": "shots/camisa7-web--02-invite-open-t.jpg",
+       "print": "shots/camisa7-web--02-invite-open.jpg",
+       "w": 1600,
+       "h": 1000,
+       "caption": "Public invite, 9/14 confirmed, guest form."
+      },
+      {
+       "n": 40,
+       "stem": "03-invite-confirmed",
+       "thumb": "shots/camisa7-web--03-invite-confirmed-t.jpg",
+       "print": "shots/camisa7-web--03-invite-confirmed.jpg",
+       "w": 1600,
+       "h": 1000,
+       "caption": "After the guest submits name and WhatsApp: presence confirmed plus PIX key card."
+      },
+      {
+       "n": 41,
+       "stem": "05-player-profile",
+       "thumb": "shots/camisa7-web--05-player-profile-t.jpg",
+       "print": "shots/camisa7-web--05-player-profile.jpg",
+       "w": 1600,
+       "h": 1108,
+       "caption": "Public player card (gold level, stat tiles, copy link)."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "unexposed": [
+  {
+   "family": "applied-ai",
+   "name": "aurea-api",
+   "kind": "API"
+  },
+  {
+   "family": "ecommerce",
+   "name": "ecommerce-api",
+   "kind": "API"
+  },
+  {
+   "family": "labor",
+   "name": "labor-calculations-api",
+   "kind": "API"
+  },
+  {
+   "family": "fleet",
+   "name": "ambulance-fleet-api",
+   "kind": "API"
+  },
+  {
+   "family": "fleet",
+   "name": "ambulance-fleet-app",
+   "kind": "MOBILE"
+  },
+  {
+   "family": "fleet",
+   "name": "ambulance-fleet-driver",
+   "kind": "MOBILE"
+  },
+  {
+   "family": "field",
+   "name": "field-operations-tracker-api",
+   "kind": "API"
+  },
+  {
+   "family": "field",
+   "name": "planting-geotracker-app",
+   "kind": "MOBILE"
+  },
+  {
+   "family": "mobile",
+   "name": "camisa7-app",
+   "kind": "MOBILE"
+  },
+  {
+   "family": "mobile",
+   "name": "camisa7-api",
+   "kind": "API"
+  }
+ ],
+ "tools": [
+  {
+   "name": "framer-site-capture-plugin",
+   "what": "Framer plugin that captures a published website and composes presentation-ready mockups."
+  },
+  {
+   "name": "wedding-rsvp-site",
+   "what": "Wedding website with personal invitation links, an RSVP form and a Firebase-backed admin panel."
+  }
+ ]
+}

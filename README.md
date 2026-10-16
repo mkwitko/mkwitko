@@ -5,6 +5,8 @@
 
 **Senior Full-Stack Engineer · Applied AI**
 
+[mkwitko.github.io/mkwitko](https://mkwitko.github.io/mkwitko/) — portfolio: every frame a real screen, with the stack and one engineering decision per product, plus experience and skills.
+
 </div>
 
 I ship web, mobile and backend products end to end, and build LLM pipelines that are measured, cost-aware and kept behind a human review step.
