@@ -1,5 +1,5 @@
 <div align="center">
-<img src="assets/banner.svg" width="100%" alt="Mauricio Oliveira, Senior Full-Stack Engineer, Applied AI">
+<img src="assets/banner.svg" width="100%" alt="Mauricio Kwitko, Senior Full-Stack Engineer, Applied AI">
 
 # Mauricio Kwitko
 
